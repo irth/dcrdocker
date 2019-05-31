@@ -65,7 +65,7 @@ WORKDIR /home/$USER
 # PEER & RPC PORTS
 EXPOSE 9108 9109
 
-COPY docker-entrypoint.sh /home/dcrd/entrypoint.sh
+COPY docker-entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["/home/dcrd/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 CMD ["./dcrd"]
