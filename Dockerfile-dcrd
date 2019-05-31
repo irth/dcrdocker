@@ -51,9 +51,6 @@ RUN set -x && \
     mv $DCR_RELEASE_NAME/dcrd $HOME && \
     chown -R $USER.$USER $HOME && \
 
-    # Install gosu for dropping root privileges in the entrypoint
-    apt-get -qy install gosu && \
-
     # Cleanup
     apt-get -qy remove $BUILD_DEPS && \
     apt-get clean && \

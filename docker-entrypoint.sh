@@ -8,4 +8,4 @@ ln -sfn "$DECRED_DATA" "$DOTDCRD"
 
 chown -h $USER:$USER "$DOTDCRD"
 
-exec gosu $USER "$@"
+exec su "$USER" -c "$*"
